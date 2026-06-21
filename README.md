@@ -1,5 +1,56 @@
 # PDF Markdown 繁體中文翻譯器
 
+## 開發中快速開始
+
+目前專案先以 Python CLI 與核心處理管線為主。第一階段可用下列命令確認 CLI 與測試框架：
+
+```bash
+python3 -m unittest discover -s tests -v
+PYTHONPATH=src python3 -m local_pdf_translator --help
+```
+
+建立任務輸出目錄的 CLI 形式：
+
+```bash
+PYTHONPATH=src python3 -m local_pdf_translator translate path/to/document.pdf --output-dir output --model llama3.1
+PYTHONPATH=src python3 -m local_pdf_translator translate path/to/book.epub --output-dir output --model llama3.1
+```
+
+未指定 `--model` 時，CLI 只建立任務與英文 raw Markdown。指定 `--model` 時，CLI 會把 `document.en.raw.md` 送入共用 Markdown 管線，切塊後呼叫 Ollama，產生 `chunks/chunk-0001.zh-TW.md` 與 `document.zh-TW.md`。
+
+可指定 Ollama host 與切塊大小：
+
+```bash
+PYTHONPATH=src python3 -m local_pdf_translator translate path/to/book.epub \
+  --output-dir output \
+  --model llama3.1 \
+  --ollama-host http://localhost:11434 \
+  --chunk-max-chars 3000
+```
+
+目前 EPUB 已支援：讀取 EPUB spine 順序，將 XHTML 章節轉成 `document.en.raw.md`，再進入共用 Markdown 翻譯管線。PDF 的 MarkItDown 轉換 adapter 仍按 `Tasks.md` 分階段實作；共用翻譯管線已可重用於任何已產生 `document.en.raw.md` 的來源。
+
+目前 chunker 會依 `--chunk-max-chars` 將相鄰 Markdown block 打包成較大的翻譯單位。以 `War and Peace and War.epub` 為例，`--chunk-max-chars 8000` 會產生約 122 個 chunk，而不是逐段落產生數千個請求。
+
+### EPUB 支援狀態
+
+第一版 EPUB 支援採最小可用範圍：
+
+- 支援 `.epub` 作為輸入格式。
+- 解析 `META-INF/container.xml` 與 OPF package。
+- 依 EPUB spine 順序讀取 XHTML 章節。
+- 將標題、段落、清單、引用、連結、圖片與 inline code 轉成 Markdown。
+- 輸出 `document.en.raw.md`。
+- 指定 `--model` 時，呼叫 Ollama 產生 `document.zh-TW.md`。
+
+暫不支援：
+
+- DRM 保護 EPUB。
+- 輸出翻譯後 EPUB。
+- 圖片中文字 OCR。
+- 完整 CSS / 排版重建。
+- EPUB 目錄與內部連結的完整 QA。
+
 ## 1. 專案定位
 
 本專案目標是建立一個本地端文件處理 App，將英文 PDF 轉換為 Markdown，並使用 Ollama 本地大模型翻譯為繁體中文 Markdown。
