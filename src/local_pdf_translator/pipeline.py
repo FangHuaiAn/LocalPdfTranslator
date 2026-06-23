@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import time
 
 from .markdown_pipeline import chunk_markdown, normalize_markdown
 from .models import ChunkStatus, Job, JobStatus
@@ -41,6 +42,10 @@ def run_markdown_translation_pipeline(
     job.failed_chunks = 0
     save_job_metadata(job)
 
+    total_chars_translated = 0
+    total_translation_seconds = 0.0
+    chunk_timings = []
+
     translated_paths: list[Path] = []
     for chunk in chunks:
         en_path = chunks_dir / f"{chunk.chunk_id}.en.md"
@@ -52,15 +57,23 @@ def run_markdown_translation_pipeline(
             chunk.status = ChunkStatus.TRANSLATED
         else:
             chunk.status = ChunkStatus.TRANSLATING
+            start_time = time.time()
             translated = client.chat(
                 model=job.model,
                 messages=build_translation_messages(chunk),
                 temperature=temperature,
                 top_p=top_p,
             )
+            duration = time.time() - start_time
             chunk.translation_text = translated.strip()
             chunk.status = ChunkStatus.TRANSLATED
             zh_path.write_text(chunk.translation_text + "\n", encoding="utf-8")
+            
+            char_count = len(chunk.source_text)
+            total_chars_translated += char_count
+            total_translation_seconds += duration
+            chunk_timings.append((chunk.chunk_id, char_count, duration))
+            print(f"[Timing] Translated {chunk.chunk_id} ({char_count} chars) in {duration:.2f}s (Speed: {(duration / char_count * 1000):.2f}s per 1k chars)")
 
         translated_paths.append(zh_path)
         job.completed_chunks += 1
@@ -72,7 +85,18 @@ def run_markdown_translation_pipeline(
     job.status = JobStatus.COMPLETED
     job.failed_chunks = 0
     save_job_metadata(job)
-    _write_report(job)
+    
+    avg_speed = (total_translation_seconds / total_chars_translated * 1000) if total_chars_translated > 0 else 0.0
+    if total_chars_translated > 0:
+        print(f"[Timing Summary] Translated {total_chars_translated} chars in {total_translation_seconds:.2f}s (Avg: {avg_speed:.2f}s per 1k chars)")
+        
+    _write_report(
+        job,
+        total_chars=total_chars_translated,
+        total_time=total_translation_seconds,
+        avg_speed=avg_speed,
+        chunk_timings=chunk_timings
+    )
     return job
 
 
@@ -81,23 +105,51 @@ def _stitch_translations(paths: list[Path]) -> str:
     return "\n\n".join(part for part in parts if part) + "\n"
 
 
-def _write_report(job: Job) -> None:
-    report = "\n".join(
-        [
-            f"# Processing Report: {job.job_id}",
+def _write_report(
+    job: Job,
+    total_chars: int = 0,
+    total_time: float = 0.0,
+    avg_speed: float = 0.0,
+    chunk_timings: list[tuple[str, int, float]] | None = None,
+) -> None:
+    lines = [
+        f"# Processing Report: {job.job_id}",
+        "",
+        "## Status",
+        "",
+        f"- Current status: {job.status.value}",
+        f"- Source file: `{job.source_pdf}`",
+        f"- Source format: `{job.source_format.value}`",
+        f"- Output directory: `{job.output_dir}`",
+        f"- Model: `{job.model or 'not set'}`",
+        f"- Translation profile: `{job.translation_profile}`",
+        f"- Total chunks: {job.total_chunks}",
+        f"- Completed chunks: {job.completed_chunks}",
+        f"- Failed chunks: {job.failed_chunks}",
+    ]
+    
+    if total_chars > 0:
+        lines.extend([
             "",
-            "## Status",
+            "## Performance Summary",
             "",
-            f"- Current status: {job.status.value}",
-            f"- Source file: `{job.source_pdf}`",
-            f"- Source format: `{job.source_format.value}`",
-            f"- Output directory: `{job.output_dir}`",
-            f"- Model: `{job.model or 'not set'}`",
-            f"- Translation profile: `{job.translation_profile}`",
-            f"- Total chunks: {job.total_chunks}",
-            f"- Completed chunks: {job.completed_chunks}",
-            f"- Failed chunks: {job.failed_chunks}",
+            f"- Total source characters translated: {total_chars}",
+            f"- Total translation duration: {total_time:.2f} seconds",
+            f"- Average processing speed: {avg_speed:.2f} seconds per 1,000 characters",
+        ])
+        
+    if chunk_timings:
+        lines.extend([
             "",
-        ]
-    )
+            "## Chunk Breakdown",
+            "",
+            "| Chunk ID | Character Count | Duration (s) | Processing Speed (s per 1k chars) |",
+            "| --- | --- | --- | --- |",
+        ])
+        for chunk_id, char_count, duration in chunk_timings:
+            speed = (duration / char_count * 1000) if char_count > 0 else 0.0
+            lines.append(f"| {chunk_id} | {char_count} | {duration:.2f}s | {speed:.2f}s |")
+            
+    lines.append("")
+    report = "\n".join(lines)
     (job.output_dir / "report.md").write_text(report, encoding="utf-8")
