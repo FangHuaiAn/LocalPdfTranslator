@@ -1,0 +1,11 @@
+Although the Germans learned a lot from the Romans and adopted many Roman cultural practices, the cultural difference between them and the Romans did not become blurred. If anything, it actually intensified with time. The clearest evidence for this polarization comes from the religious changes on each side of the frontier. During the first centuries of contact, both peoples followed polytheistic religions that were fairly tolerant of other peoples’ beliefs. However, beginning with the reign of Constantine (306-337), the Romans converted to Christianity—a monotheistic religion that treated all other beliefs as (at best) an error, and (at worst) devil worship. The religion of the Germans also evolved, and in a direction that increased the distance between them and the Romans.
+
+At the time of the contact with the Romans, the head of the German pantheon was Tiwaz, an Indo-European deity of creation, order, justice, and natural cycles—an appropriate god to worship for an agricultural population. The conditions of the frontier with their heightened insecurity and incessant military conflict, however, favored the rise of war leaders and their retinues. War increasingly became the occupation of adult free men, whereas subsistence tasks were left to women and slaves. (The latter were constantly replenished from the pool of war captives.) As a result, the cult of Tiwaz declined, and many Germanic tribes turned to Odin (Wodan). Odin had probably been a minor wind god and perhaps, like Mercury, he conducted the souls to the other world. (At least, the Romans usually identified Odin with Mercury, although this could be due to the fact that both were depicted wearing wide-brimmed hats and carrying a staff or a spear.) Between A.D. 50 and 200, Odin was transformed into Allfather, the king of gods, and became the patron deity of the new warlords and their retinues. According to the new mythology, Odin sacrificed himself—to himself— for knowledge and power. In The Words of the High One, a poem from the Elder Edda, Odin says:I know that I hung
+on the wind-swept tree
+nine entire nights,
+wounded with a spear,
+given to Odin,
+myself to myself,
+on that tree,
+of which no man knows
+of what roots it runs.

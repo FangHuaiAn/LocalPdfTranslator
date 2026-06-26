@@ -1,0 +1,13 @@
+```markdown
+## 文檔路徑：Document
+
+The second aspect of the American patriotism is what Lieven calls “Jacksonian nationalism.” President Andrew Jackson (1767-1845) is best known for his victory against the British at New Orleans in 1815. But he achieved prominence as an Indian fighter and leader of local militias on the Tennessee frontier. Most of his campaigns were against the Cherokee, Creek, and other Indians. Lieven argues that “although ‘Jacksonian nationalism’ contains other important elements, including nativism, anti-elitism, anti-intellectualism, and dislike of the Northeast, a strong sense of White identity, and violent hostility to other races, was long at its core.”
+
+In 1831, during Jackson’s presidency, the Cherokee Nation appealed to the U.S. Supreme Court against new laws passed by the state of Georgia, which laid the basis for the Indians’ expulsion from the lands they held long before European settlers appeared in America. These laws were in violation of several treaties with U.S. governments, and a majority of the Supreme Court, led by Chief Justice John Marshall, ruled in favor of Cherokees.
+
+As Lieven relates, “To this Jackson reputedly replied, ‘John Marshall has made his decision; now let him enforce it.’ Although the president may not actually have said this, these words certainly reflected the spirit in which he acted. The U.S. government refused to defend the Cherokees against Georgia, Jackson warned them that they had no choice but to leave, and within a few years (although after Jackson himself left the office) they were driven out of their ancestral lands onto the ‘Trail of Tears’ to Oklahoma, on which a great many died of disease and malnutrition.”
+
+Fast forward to the twenty-first century. In the aftermath of the terrorist attack of September 11, 2001, the radio show host Michael Savage, after referring to Arabs as “nonhumans,” said “conversion to Christianity is the only thing that probably can turn them into human beings.” As Lieven reports, he then declared: “Smallpox in a blanket, which the U.S. Army gave to the Cherokee Indians on their long march to the West, was nothing to what I’d like to see done to these people.”
+
+The comparison that Lieven draws between the struggle of settlers against Indians on the American frontier and the clash between U.S.-led Western and Muslim civilizations fits with the principles of cliodynamics. I have argued in Chapter 2 that the origins of the American nation and the source of its high asabiya are found in the settler-Indian frontier during the seventeenth, eighteenth, and nineteenth centuries. The frontier is long gone, but cultural idioms and techniques of dealing with challenges are being adapted to the new challenges and adversaries.
+```

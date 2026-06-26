@@ -1,0 +1,18 @@
+{
+  "job_id": "War and Peace and War",
+  "source_path": "targets\\War and Peace and War\\War and Peace and War.epub",
+  "source_pdf": "targets\\War and Peace and War\\War and Peace and War.epub",
+  "output_dir": "output\\War and Peace and War",
+  "created_at": "2026-06-22T08:04:11+00:00",
+  "source_format": "epub",
+  "status": "Completed",
+  "model": "gemma3:4b",
+  "translation_profile": "Balanced",
+  "prompt_version": "prompt-v1",
+  "glossary_enabled": false,
+  "traditional_chinese_conversion_enabled": false,
+  "total_chunks": 360,
+  "completed_chunks": 360,
+  "failed_chunks": 0,
+  "warnings": []
+}

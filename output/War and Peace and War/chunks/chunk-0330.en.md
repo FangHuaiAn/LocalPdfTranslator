@@ -1,0 +1,13 @@
+“Russian history continued to suffer from observer biases in the twentieth century.” The traditional, Cold War era view of Russian history is presented by Pipes, R. 1974. Russia Under the Old Regime. Scribner, New York. Recently Pipes’s interpretations and scholarship has been criticized; see, for example, Weickhardt, G. G. 1993. The pre-Petrine law of property. Slavic Review 52:663—679. A much more balanced treatment of the relations between state and society in early modern Russia can be found in Kollmann, N. S. 1987. Kinship and Politics: The Making of the Muscovite Political System, 1345—1547. Stanford University, Stanford, CA; Kollmann, N. S. 1999. By Honor Bound: State and Society in Early Modern Russia. Cornell University Press, Ithaca, NY; and Kivelson, V. A. 1996. Autocracy in the Provinces: The Muscovite Gentry and Political Culture in the Seventeenth Century. Stanford University Press, Stanford, CA. Ostrowski, D. 1998. Muscovy and the Mongols: Cross-Cultural Influences on the Steppe Frontier, 1304—1589. Cambridge University Press, Cambridge, UK.
+
+“cooperative spirit in the frontier territories” McNeill on the cooperation between commoners and elites in early modern Russia: “The peasants, although compelled to accept a burdensome serfdom, saw a rude sort of justice in the service state, which required landowners to serve the tsar just as the peasants were compelled to serve their masters, the landowners.” McNeill, W. H. 1964. Europe’s Steppe Frontier. University of Chicago Press, Chicago, IL. p. 64.
+
+For the social composition of the Russian frontier, see Stevens, C. B. 1995. Soldiers on the Steppe. Northern Illinois University Press, DeKalb. See also Mironov, B. N. 2000. A Social History of Imperial Russia, 1700—1917. Westview Press, Boulder, CO.
+
+“The pressure from the steppe nomads molded Muscovy’s institutions and culture.” In fact, Muscovy directly imported a number of institutions, such as the postal service and tax administrative methods from the Golden Horde. See Halperin, C. J. 1985. Russia and the Golden Horde: The Mongol Impact on Medieval Russian History. Indiana University Press, Bloomington, IN.
+
+“instead of challenging you to a duel, they would sue you in court” See Kollmann, By Honor Bound, p. 153.
+
+“During the 1640s, the authorities confiscated the magnate-owned land within the frontier, freed the peasants, and enlisted them in dragoon regiments for garrison service.” See Davies, B. 1992. Village into garrison: the militarized peasant communities of southern Moscovy. Russian Review 51:481—501.
+
+“tragedy of the commons” Hardin, G. 1968. The tragedy of the commons. Science 162:1243—1248.

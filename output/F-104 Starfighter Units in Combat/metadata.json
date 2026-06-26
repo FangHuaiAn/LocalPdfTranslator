@@ -1,0 +1,18 @@
+{
+  "job_id": "F-104 Starfighter Units in Combat",
+  "source_path": "targets\\F-104 Starfighter Units in Combat\\F-104 Starfighter Units in Combat.pdf",
+  "source_pdf": "targets\\F-104 Starfighter Units in Combat\\F-104 Starfighter Units in Combat.pdf",
+  "output_dir": "output\\F-104 Starfighter Units in Combat",
+  "created_at": "2026-06-22T07:40:47+00:00",
+  "source_format": "pdf",
+  "status": "Completed",
+  "model": "gemma3:4b",
+  "translation_profile": "Balanced",
+  "prompt_version": "prompt-v1",
+  "glossary_enabled": false,
+  "traditional_chinese_conversion_enabled": false,
+  "total_chunks": 87,
+  "completed_chunks": 87,
+  "failed_chunks": 0,
+  "warnings": []
+}

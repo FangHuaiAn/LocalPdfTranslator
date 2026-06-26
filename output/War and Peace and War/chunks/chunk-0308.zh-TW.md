@@ -1,0 +1,17 @@
+```markdown
+Section path: Document
+
+Finally, there has been a troubling trend in the American asabiya. Robert Putnam asserts in Bowling Alone that at least since the times of Tocqueville, the American society has always enjoyed large stocks of social capital. But, beginning in 1960, several indicators of social capital started declining. Putnam writes, “We have become increasingly disconnected from family, friends, neighbors, and social structures, whether PTA, church, recreation clubs, political parties, or bowling leagues.” Thirty years ago, people invited friends for dinner twice as often as today. Social trust also seems to be declining. Certainly, the proportion of people saying that they trust the government in Washington has been steadily declining—from between 70 and 80 percent in the late 1950s to between 30 and 40 percent in the 1990s. Forty-five percent of Americans believe little or nothing in their daily newspapers, up from 16 percent two decades ago. The message of Bowling Alone is one of the increasing isolation of individuals, alone in cars, alone at work, divorced, bowling under fluorescent lights alone. Surely that is a sign of impending danger for any society.
+
+If this trend of social disintegration does not correctly foretell more trouble, it will be because new kinds of integration are now at work. My last chapter is a hopeful one about how the trend toward greater communication and interconnectedness might affect our secular cycle, might change what asabiya means geographically, and might indeed change the very idea of what empire is.
+
+Chapter 14
+
+The End of Empire?
+
+How the Mobile Phone Is Changing Cliodynamics
+
+In 1918, as the victors of the First World War were dismantling the Habsburg and Ottoman empires, while revolutions were tearing apart Russia and Germany, many thought that the age of empires was over. The death of imperialism was next proclaimed in the 1960s when England, France and other European colonial powers shed their overseas empires. When the Soviet Union collapsed in 1991, commentators of international affairs held another wake for empire. Is this the end of history? Or at least the end of the cycles of empires? Or are rumors of empire demise exaggerated? Will the insights from cliodynamics about historical empires remain as purely academic knowledge, fit to be enjoyed only by armchair historians, sitting snug by the fire and sipping an after-dinner cognac? Or do these insights have relevance to international politics today?
+
+Recently, there has been much discussion of whether the United States today is an empire that can and should be compared with imperial powers of the past. Empire seems to be in fashion, even if some (generally those with left-leaning politics) hate the idea, whereas others (such as neoconservatives) love it. According to Charles Krauthammer, a frequent contributor to the neoconservative Weekly Standard, “We are not just any hegemon. We run a uniquely benign imperium.”
+```
